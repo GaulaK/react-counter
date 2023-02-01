@@ -3,6 +3,8 @@ body {
   font-family: "Montserrat", sans-serif;
 }
 
+/* --------- HEADER --------- */
+
 header {
   height: 115px;
   width: 100%;
@@ -26,6 +28,7 @@ header h1 {
   line-height: 59px;
 }
 
+/* --------- FOOTER --------- */
 footer {
   display: flex;
   justify-content: center;
