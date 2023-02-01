@@ -30,10 +30,13 @@ header h1 {
 
 /* --------- FOOTER --------- */
 footer {
+  height: 115px;
+  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
   padding-bottom: 70px;
+  text-align: center;
 }
 footer span {
   font-weight: bold;
@@ -72,7 +75,7 @@ button:hover {
 /* --------- BUTTONS CASE --------- */
 
 .counter-boxes {
-  margin: 200px 0;
+  margin: 150px 0;
 }
 
 .counter-boxes > * {
@@ -109,4 +112,39 @@ button {
   justify-content: center;
   align-items: center;
   border: none;
+}
+
+/* --------- MEDIA --------- */
+/* --------- MEDIA --------- */
+/* --------- MEDIA --------- */
+
+@media (max-width: 768px) {
+  /* --------- MEDIA HEADER --------- */
+  header h1 {
+    font-size: 32px;
+    flex: 1;
+  }
+
+  header div {
+    margin-left: 10px;
+  }
+
+  header {
+    justify-content: space-around;
+  }
+
+  .counter-boxes {
+    margin: 5% 0;
+  }
+  .counter-boxes > div {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .counter-boxes > div :nth-child(2) {
+    order: 1;
+  }
+  .counter-boxes > div :not(:nth-child(2)) {
+    order: 2;
+  }
 }
