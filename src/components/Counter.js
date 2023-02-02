@@ -1,3 +1,5 @@
+import Button from "./Button";
+
 const Counter = ({ counter, setCounter }) => {
   return (
     <>
@@ -6,7 +8,7 @@ const Counter = ({ counter, setCounter }) => {
           {" "}
           <div className="box">
             {counter > 0 && (
-              <button onClick={() => setCounter(counter - 1)}>-</button>
+              <Button counter={counter} setCounter={setCounter} calculate="-" />
             )}
           </div>
           <div className="box value">
@@ -14,7 +16,7 @@ const Counter = ({ counter, setCounter }) => {
           </div>
           <div className="box">
             {counter < 10 && (
-              <button onClick={() => setCounter(counter + 1)}>+</button>
+              <Button counter={counter} setCounter={setCounter} calculate="+" />
             )}
           </div>
         </div>
