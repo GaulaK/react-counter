@@ -5,23 +5,17 @@ const Counter = ({ counter, setCounter }) => {
         <div>
           {" "}
           <div className="box">
-            <button
-              style={{ display: counter < 1 ? "none" : "inherit" }}
-              onClick={() => setCounter(counter - 1)}
-            >
-              -
-            </button>
+            {counter > 0 && (
+              <button onClick={() => setCounter(counter - 1)}>-</button>
+            )}
           </div>
           <div className="box value">
             <span>{counter}</span>
           </div>
           <div className="box">
-            <button
-              style={{ display: counter > 9 ? "none" : "inherit" }}
-              onClick={() => setCounter(counter + 1)}
-            >
-              +
-            </button>
+            {counter < 10 && (
+              <button onClick={() => setCounter(counter + 1)}>+</button>
+            )}
           </div>
         </div>
         <div>
